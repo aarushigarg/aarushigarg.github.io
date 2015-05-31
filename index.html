@@ -9,7 +9,7 @@ title: Home
     	<div class="row-fluid">
     		<section class="content">
     		  <h1>Aarushi Garg</h1>
-          <div class="sub-title">A list of interesting lorem ipsums I found on the web</div>
+          <div class="sub-title"></div>
     		</section>
     		<ul class="entries">
     		{% for post in paginator.posts %}
@@ -17,7 +17,7 @@ title: Home
     		    <a href="{{ post.url }}">
     		        <h3>{{ post.title }}</h3>
                 <time>{{ post.date | date: "%d %B %Y" }}</time>
-                <div>{{ post.content | truncatewords: 30 }}</div>
+                <div>{{ post.content | truncate:200 | truncatewords: 30 }}</div>
     		    </a>
     		  </li>
     		{% endfor %}
